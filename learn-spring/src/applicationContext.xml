@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- load the properties file: application.properties -->
+    <context:property-placeholder location="classpath:application.properties" />
+
+    <!-- Define beans -->
+    <bean
+            id="javaTeacher"
+            class="com.ms.app.model.JavaTeacher"
+    >
+        <constructor-arg ref="teacherService"/>
+        <property name="id" value="100"/>
+        <property name="name" value="Kok"/>
+        <property name="subject" value="Java"/>
+    </bean>
+
+    <bean
+            id="jvTeacher"
+            class="com.ms.app.model.JavaTeacher"
+    >
+        <constructor-arg name="_name" index="0" value="Tola"/>
+        <constructor-arg name="_subject" index="1" value="Jv"/>
+    </bean>
+
+    <bean
+            id="pythonTeacher"
+            class="com.ms.app.model.PythonTeacher"
+    >
+        <property name="teacherService" ref="teacherService"/>
+        <property name="id" value="${app.teacher.id}"/>
+        <property name="name" value="${app.teacher.name}"/>
+        <property name="subject" value="${app.teacher.subject}"/>
+    </bean>
+
+    <bean
+        id="rustTeacher"
+        class="com.ms.app.model.RustTeacher"
+        init-method="initMethod"
+        destroy-method="destroyMethod"
+    >
+        <constructor-arg ref="teacherService"/>
+<!--        <property name="id" value="108"/>-->
+<!--        <property name="name" value="Kok Tola"/>-->
+<!--        <property name="subject" value="Rust"/>-->
+    </bean>
+
+    <bean
+        id="goTeacher"
+        class="com.ms.app.model.GoTeacher"
+        scope="prototype"
+    >
+        <constructor-arg ref="teacherService"/>
+<!--        <property name="id" value="209"/>-->
+<!--        <property name="name" value="Kok Seyha"/>-->
+<!--        <property name="subject" value="Go"/>-->
+    </bean>
+
+    <bean
+            id="teacherService"
+            class="com.ms.app.service.implementation.TeacherServiceImpl"
+    />
+
+</beans>
