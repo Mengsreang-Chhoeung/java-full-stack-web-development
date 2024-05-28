@@ -1,0 +1,22 @@
+server:
+  port: 8090
+
+spring:
+  profiles:
+    active: ${APP_PROFILE_ACTIVE:local}
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 1MB
+      max-request-size: 10MB
+
+  datasource:
+    url: jdbc:postgresql://localhost:5434/jfswd_1_upload_file_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
