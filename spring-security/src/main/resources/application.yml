@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: spring-security
+
+#  security:
+#    user:
+#      name: username
+#      password: password
+#      roles: admin,supplier
+
+logging:
+  level:
+    org:
+      springframework:
+        security: TRACE
