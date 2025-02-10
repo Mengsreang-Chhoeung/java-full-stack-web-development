@@ -1,0 +1,26 @@
+server:
+  port: ${APP_PORT:8090}
+
+spring:
+  application:
+    origin-url: ${APP_ORIGIN_URL:http://localhost:${server.port}}
+
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost:${DB_PORT:5434}}/${DB_NAME:jfswd_1_security_jwt_db}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: ${HIBERNATE_DDL_AUTO:update}
+    show-sql: ${JPA_SHOW_SQL:true}
+    open-in-view: ${JPA_OPEN_IN_VIEW:false}
+    properties:
+      hibernate:
+        format_sql: ${HIBERNATE_FORMAT_SQL:false}
+
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        security: TRACE

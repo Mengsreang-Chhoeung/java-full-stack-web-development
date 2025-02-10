@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: ${APP_NAME:spring-security-jwt}
+    description: ${APP_DESCRIPTION:Spring Security With JWT}
+    version: ${APP_VERSION:1.0.0}
+  profiles:
+    active: ${PROFILE_ACTIVE:dev}
+
