@@ -1,4 +1,6 @@
 package learn.java.records;
 
-public record RecordClass(int x, int y) {
+import java.io.Serializable;
+
+public record RecordClass(int x, int y) implements Serializable {
 }
