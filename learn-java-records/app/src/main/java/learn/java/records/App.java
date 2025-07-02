@@ -4,11 +4,13 @@
 package learn.java.records;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
-
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        // Traditional approach
+        NormalClass normalClass = new NormalClass(10, 20);
+        System.out.println("Hello x: " + normalClass.getX() + " and y: " + normalClass.getY());
+
+        // Java Records approach
+        RecordClass recordClass = new RecordClass(100, 200);
+        System.out.println("Hello Record x: " + recordClass.x() + " and y: " + recordClass.y());
     }
 }
