@@ -10,7 +10,14 @@ public class App {
         System.out.println("Hello x: " + normalClass.getX() + " and y: " + normalClass.getY());
 
         // Java Records approach
-        RecordClass recordClass = new RecordClass(100, 200);
+        int[] scores = { 10, 20, 30 };
+        RecordClass recordClass = new RecordClass(100, 200, scores);
         System.out.println("Hello Record x: " + recordClass.x() + " and y: " + recordClass.y());
+        int[] scores2 = recordClass.scores();
+        scores2[1] = 100;
+
+        for (int score : recordClass.scores()) {
+            System.out.print(score + " ");
+        }
     }
 }
