@@ -22,7 +22,7 @@ public class App {
         // System.out.print(score + " ");
         // }
 
-        Range range = new Range(10, 20);
+        Range range = new Range(10);
         System.out.println("Hello range start: " + range.start() + " and end: " + range.end());
     }
 }
