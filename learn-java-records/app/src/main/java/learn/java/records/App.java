@@ -6,18 +6,23 @@ package learn.java.records;
 public class App {
     public static void main(String[] args) {
         // Traditional approach
-        NormalClass normalClass = new NormalClass(10, 20);
-        System.out.println("Hello x: " + normalClass.getX() + " and y: " + normalClass.getY());
+        // NormalClass normalClass = new NormalClass(10, 20);
+        // System.out.println("Hello x: " + normalClass.getX() + " and y: " +
+        // normalClass.getY());
 
         // Java Records approach
-        int[] scores = { 10, 20, 30 };
-        RecordClass recordClass = new RecordClass(100, 200, scores);
-        System.out.println("Hello Record x: " + recordClass.x() + " and y: " + recordClass.y());
-        int[] scores2 = recordClass.scores();
-        scores2[1] = 100;
+        // int[] scores = { 10, 20, 30 };
+        // RecordClass recordClass = new RecordClass(100, 200, scores);
+        // System.out.println("Hello Record x: " + recordClass.x() + " and y: " +
+        // recordClass.y());
+        // int[] scores2 = recordClass.scores();
+        // scores2[1] = 100;
 
-        for (int score : recordClass.scores()) {
-            System.out.print(score + " ");
-        }
+        // for (int score : recordClass.scores()) {
+        // System.out.print(score + " ");
+        // }
+
+        Range range = new Range(10, 20);
+        System.out.println("Hello range start: " + range.start() + " and end: " + range.end());
     }
 }
