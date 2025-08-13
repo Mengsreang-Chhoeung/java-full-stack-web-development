@@ -1,0 +1,2 @@
+# Ignore the mount docker folder
+/docker/mysql-data
