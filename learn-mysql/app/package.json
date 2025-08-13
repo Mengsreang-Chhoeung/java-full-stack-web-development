@@ -1,0 +1,13 @@
+{
+  "name": "express-app",
+  "version": "1.0.0",
+  "description": "express-app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "mysql": "^2.18.1"
+  }
+}

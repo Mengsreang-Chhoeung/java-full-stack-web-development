@@ -1,2 +1,5 @@
 # Ignore the mount docker folder
 /docker/mysql-data
+
+# Ignore the node_modules
+/app/node_modules
