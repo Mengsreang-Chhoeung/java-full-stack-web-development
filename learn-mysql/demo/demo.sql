@@ -1,4 +1,4 @@
--- docker exec mysql-db -it bash
+-- docker exec learn-mysql-db -it bash
 -- mysql -u root -p
 
 -- Create a database
